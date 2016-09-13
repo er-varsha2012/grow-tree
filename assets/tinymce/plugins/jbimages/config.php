@@ -39,10 +39,16 @@
 	 
 
 // Change the paths as per your folders
-
-$config['upload_path'] = $_SERVER['DOCUMENT_ROOT']."/"."ark_admin_v2/uploads/images" ;
-$config['img_path'] = "http://".$_SERVER['SERVER_NAME'].'/ark_admin_v2/uploads/images' ;
-     
+if($_SERVER['SERVER_NAME']=='localhost')
+{
+	$config['upload_path'] = $_SERVER['DOCUMENT_ROOT']."/"."grow-tree/uploads/images" ;
+	$config['img_path'] = "http://".$_SERVER['SERVER_NAME'].'/grow-tree/uploads/images' ;
+}
+else
+{
+	$config['upload_path'] = $_SERVER['DOCUMENT_ROOT']."/"."uploads/images" ;
+	$config['img_path'] = "http://".$_SERVER['SERVER_NAME'].'/uploads/images' ;
+}  
        
 
 
